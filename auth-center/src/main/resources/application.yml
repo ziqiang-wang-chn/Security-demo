@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    username: root
+    password: qidai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/auth_server?useUnicode=true&characterEncoding=utf8&useSSL=true&useAffectedRows=true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+jwt:
+  secret: sadwr45568eq341qweqweqwee
+  expires: 7
+  ignore:   # 统一配置security的忽略路径
+    urls:
+      - /login
