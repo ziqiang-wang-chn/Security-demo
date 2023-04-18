@@ -1,5 +1,6 @@
 package cn.ohbug.authcenter.config.auth;
 
+import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -8,15 +9,9 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @ConfigurationProperties(prefix = "jwt.ignore")
+@Data
 public class SecurityIgnoreRequestPaths {
 
   private String urls[];
 
-  public String[] getUrls() {
-    return urls;
-  }
-
-  public void setUrls(String[] urls) {
-    this.urls = urls;
-  }
 }

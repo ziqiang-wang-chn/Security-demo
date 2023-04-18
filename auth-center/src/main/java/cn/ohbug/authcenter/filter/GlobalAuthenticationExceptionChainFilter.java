@@ -11,7 +11,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 
 /**
- * 因为JwtAuthenticationFilter属于filter，而GlobalExceptionHandler只会处理restcontroller中的异常
+ * 因为JwtAuthenticationFilter属于filter，而GlobalExceptionHandler只会处理RestController中的异常
  * 并不会处理filter中的异常，所以此类是添加到spring security过滤链中，过滤所有filter爆出来的异常
  */
 @Component
